@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Max's Flow — Dramatic Variant</title>
+  <link rel="stylesheet" href="styles-alt.css" />
+</head>
+
+<body>
+  <div class="bg-grid"></div>
+  <div class="orb orb-one"></div>
+  <div class="orb orb-two"></div>
+  <div class="orb orb-three"></div>
+
+  <header class="topbar">
+    <div class="brand-wrap">
+      <div class="brand-mark">M</div>
+      <span>Max's Flow</span>
+    </div>
+
+    <nav>
+      <a href="#overview">Overview</a>
+      <a href="#focus">Focus</a>
+      <a href="#energy">Energy</a>
+    </nav>
+
+    <button class="nav-button" type="button">Start the beat</button>
+  </header>
+
+  <main class="page-shell" id="overview">
+    <section class="hero panel">
+      <div class="hero-copy">
+        <p class="eyebrow">Creative energy</p>
+        <h1>Three things that make me move.</h1>
+        <p class="lead">
+          Baseball, drumming, and computer work all teach me speed, rhythm,
+          and control. I love the way each one pushes my focus in a different direction.
+        </p>
+
+        <div class="cta-row">
+          <button class="primary-btn pulse" type="button">Explore my flow</button>
+          <button class="secondary-btn" type="button">See the highlights</button>
+        </div>
+
+        <div class="stats">
+          <div>
+            <strong data-target="18">0</strong>
+            <span>Game days</span>
+          </div>
+          <div>
+            <strong data-target="6">0</strong>
+            <span>Years rhythm</span>
+          </div>
+          <div>
+            <strong data-target="42">0</strong>
+            <span>Projects</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual" aria-hidden="true">
+        <div class="ring ring-one"></div>
+        <div class="ring ring-two"></div>
+        <div class="floating-card card-a">
+          <span>Baseball</span>
+          <strong>Timing</strong>
+        </div>
+        <div class="floating-card card-b">
+          <span>Drums</span>
+          <strong>Rhythm</strong>
+        </div>
+        <div class="floating-card card-c">
+          <span>Code</span>
+          <strong>Build</strong>
+        </div>
+      </div>
+    </section>
+
+    <section class="feature-panel panel" id="focus">
+      <div class="feature-header">
+        <h2>My favorite lanes</h2>
+        <div class="toggle-row">
+          <button class="mode is-active" data-mode="baseball" type="button">Baseball</button>
+          <button class="mode" data-mode="drumming" type="button">Drumming</button>
+          <button class="mode" data-mode="computer" type="button">Computer work</button>
+        </div>
+      </div>
+
+      <div class="feature-content">
+        <div class="feature-text">
+          <p class="kicker">Selected focus</p>
+          <h3 id="mode-title">Baseball</h3>
+          <p id="mode-text">
+            Baseball is all about discipline, timing, and staying calm under pressure. Every move
+            teaches me to react fast and stay locked in.
+          </p>
+          <ul id="mode-tags" class="tag-list">
+            <li>Timing</li>
+            <li>Focus</li>
+            <li>Movement</li>
+          </ul>
+        </div>
+
+        <div class="feature-scene" aria-hidden="true">
+          <div class="scene-bar scene-top"><span id="scene-top">Ready</span><small>Energy</small></div>
+          <div class="scene-bar scene-mid"><span id="scene-mid">Fast feet</span><small>Drive</small></div>
+          <div class="scene-bar scene-bottom"><span id="scene-bottom">Sharp eyes</span><small>Focus</small></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="card-grid" id="energy">
+      <article class="skill-card baseball is-selected" data-mode="baseball">
+        <div class="card-meta">
+          <span>01</span>
+          <span class="pill">Baseball</span>
+        </div>
+        <h3>Fast hands. Calm mind.</h3>
+        <p>
+          Baseball teaches me patience, reaction time, and how to stay balanced when everything
+          feels intense.
+        </p>
+        <div class="score-row">
+          <span>Focus level</span>
+          <strong>92%</strong>
+        </div>
+        <button class="card-button" type="button"><span class="dot"></span>View baseball</button>
+      </article>
+
+      <article class="skill-card drumming" data-mode="drumming">
+        <div class="card-meta">
+          <span>02</span>
+          <span class="pill">Drumming</span>
+        </div>
+        <h3>Rhythm that hits hard.</h3>
+        <p>
+          Drumming gives me timing, groove, and control. It turns energy into a steady, powerful beat.
+        </p>
+        <div class="score-row">
+          <span>Groove score</span>
+          <strong>95%</strong>
+        </div>
+        <button class="card-button" type="button"><span class="dot"></span>Hear the beat</button>
+      </article>
+
+      <article class="skill-card computer" data-mode="computer">
+        <div class="card-meta">
+          <span>03</span>
+          <span class="pill">Computer work</span>
+        </div>
+        <h3>Build, test, improve.</h3>
+        <p>
+          Computer work is where I turn ideas into structure, motion, and polished digital experiences.
+        </p>
+        <div class="score-row">
+          <span>Problem solving</span>
+          <strong>98%</strong>
+        </div>
+        <button class="card-button" type="button"><span class="dot"></span>Build it</button>
+      </article>
+    </section>
+  </main>
+
+  <script src="script-alt.js"></script>
+</body>
+
+</html>
