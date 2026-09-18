@@ -29,6 +29,47 @@
     const spotlightArt = document.getElementById('spotlight-art');
     const chips = [...document.querySelectorAll('.chip')];
     const cards = [...document.querySelectorAll('.skill-card')];
+    const themeButtons = [...document.querySelectorAll('[data-theme]')];
+    const motionToggle = document.querySelector('[data-motion]');
+
+    const themeMap = {
+      baseball: ['#ff9f1c', '#ffb703', 'rgba(255, 159, 28, 0.18)'],
+      drumming: ['#8b5cf6', '#a78bfa', 'rgba(139, 92, 246, 0.18)'],
+      computer: ['#22c55e', '#4ade80', 'rgba(34, 197, 94, 0.18)']
+    };
+
+    function setTheme(themeName) {
+      const [accent, accentStrong, accentSoft] = themeMap[themeName] || themeMap.baseball;
+      document.documentElement.style.setProperty('--accent', accent);
+      document.documentElement.style.setProperty('--accent-strong', accentStrong);
+      document.documentElement.style.setProperty('--accent-soft', accentSoft);
+
+      themeButtons.forEach((button) => {
+        button.classList.toggle('is-selected', button.dataset.theme === themeName);
+      });
+    }
+
+    function setMotion(enabled) {
+      document.body.classList.toggle('reduced-motion', !enabled);
+      if (motionToggle) {
+        motionToggle.textContent = enabled ? 'Motion: On' : 'Motion: Off';
+        motionToggle.classList.toggle('is-active', enabled);
+      }
+    }
+
+    themeButtons.forEach((button) => {
+      button.addEventListener('click', () => setTheme(button.dataset.theme));
+    });
+
+    if (motionToggle) {
+      motionToggle.addEventListener('click', () => {
+        const isReduced = document.body.classList.contains('reduced-motion');
+        setMotion(!isReduced);
+      });
+    }
+
+    setTheme('baseball');
+    setMotion(true);
 
     function setActiveSkill(skillKey) {
       const info = skillData[skillKey];
@@ -118,4 +159,3 @@
         card.style.transform = '';
       });
     });
-  
